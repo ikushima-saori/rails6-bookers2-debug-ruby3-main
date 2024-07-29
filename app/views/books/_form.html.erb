@@ -8,10 +8,6 @@
     <%= f.text_area :body, class: 'form-control' %>  <!-- 'form-control book_body'-->
   </div>
   <div class="form-group">
-    <%# if request.path_info == edit_book_path(book.id) %>
-      <%#= f.submit 'Update Book', class: 'btn btn-success' %>
-    <%#else%>
       <%= f.submit class: 'btn btn-success' %>  <!-- 'Create Book', を追加-->
-    <%# end %>
-    </div>
+  </div>
 <% end %>

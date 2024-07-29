@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-before_action :is_matching_login_user, only: [:edit, :update]
+before_action :is_matching_login_user, only: [:edit, :update, :destroy]  #, :destroyを追加
 
   def index
     @books = Book.all
@@ -23,7 +23,7 @@ before_action :is_matching_login_user, only: [:edit, :update]
     @book_comment = BookComment.new
     @book_new = Book.new  #追加
     @user = @book.user  #追加
-    
+
   end
 
   def edit
