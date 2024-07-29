@@ -20,8 +20,10 @@ before_action :is_matching_login_user, only: [:edit, :update]
 
   def show    #一番上から移動
     @book = Book.find(params[:id])
+    @book_comment = BookComment.new
     @book_new = Book.new  #追加
     @user = @book.user  #追加
+    
   end
 
   def edit
