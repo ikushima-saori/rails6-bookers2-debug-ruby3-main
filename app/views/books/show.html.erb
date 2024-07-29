@@ -33,6 +33,9 @@
                   <%= book_comment.user.name %></td>
                 <% end %>
           <td><%= book_comment.comment %></td>
+                <% if book_comment.user == current_user %>
+                  <td><%= link_to "Destroy", book_book_comment_path(book_comment.book, book_comment), method: :delete, class: "btn btn-sm btn-danger" %></td>
+                <% end %>
               <% end %>
           </tr>
       </table>
