@@ -1,6 +1,3 @@
-<div class="d-flex justify-content-center mb-2">
-  <%= render "searches/form" %>
-</div>
 <% if @model == 'user' %>
     <h3>Users search for "<%= @content %>"</h3>
   <%= render 'users/index', users: @records %>

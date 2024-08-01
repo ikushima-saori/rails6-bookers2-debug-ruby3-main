@@ -12,6 +12,9 @@
   <body>
     <%= render 'layouts/header' %>
       <main>
+        <div class="d-flex justify-content-center mb-2">
+          <%= render "searches/form" %>
+        </div>
         <p id="notice"><%= notice %></p>
         <%= yield %>  <!--追加-->
       </main>
