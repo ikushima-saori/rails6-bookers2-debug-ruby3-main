@@ -19,7 +19,7 @@
         <td id="favorite_btn_<%= book.id %>">
           <%= render "favorites/btn", book: book %>
         </td>
-        <td><%= link_to "コメント数: #{book.book_comments.count} ", book_path(book.id) %></td>
+        <td><%= "コメント数: #{book.book_comments.count} " %></td>
       </tr>
     <% end %>
   </tbody>

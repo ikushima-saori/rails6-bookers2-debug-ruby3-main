@@ -1,5 +1,5 @@
 <div>
-  <%= form_with model: [book, book_comment], local: false  do |f| %>
+  <%= form_with model: [book, book_comment], local: false ,method: :post  do |f| %>
   <%= f.text_area :comment, class: "w-100"  %>
   <p><%= f.submit "送信" %></p>
   <% end %>
