@@ -11,6 +11,9 @@
       <tr>
         <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
         <td><%= user.name %></td>
+        <td>フォロー数: <%= user.follower_user.count %></td>
+        <td>フォロワー数: <%= user.followed_user.count %></td>
+        <td><%= render "relationships/followbtn", user: user, options: { class: "follow-link" } %></td>
         <td><%= link_to 'Show', user_path(user.id) %></td>  <!--_path(user.id)を追加-->
       </tr>
     <% end %>
